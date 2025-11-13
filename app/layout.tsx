@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto, Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import { HeroHeader } from "@/components/header";
+import WhatsAppChat from "@/components/whatsapp-chat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
       >
         <HeroHeader />
         {children}
+        <WhatsAppChat />
       </body>
     </html>
   );

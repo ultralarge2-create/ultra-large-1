@@ -10,12 +10,12 @@ import { GetStartedModal } from '@/components/get-started-modal'
 const menuItems = [
     { 
         name: 'Home', 
-        href: '#home',
+        href: '/',
         submenu: []
     },
     { 
         name: 'Immigration', 
-        href: '#immigration',
+        href: '/immigration/work-permit',
         submenu: [
             { name: 'work permit', href: '/immigration/work-permit' },
             { name: 'permanent resident', href: '/immigration/permanent-resident' },
@@ -28,7 +28,7 @@ const menuItems = [
     },
     { 
         name: 'Study Abroad', 
-        href: '#study',
+        href: '/study-abroad/europe',
         submenu: [
             { name: 'Europe', href: '/study-abroad/europe' },
             { name: 'Asia', href: '/study-abroad/asia' },
@@ -40,7 +40,7 @@ const menuItems = [
     },
     { 
         name: 'Job Seekers', 
-        href: '#jobs',
+        href: '/job-seekers/europe',
         submenu: [
             { name: 'Europe', href: '/job-seekers/europe' },
             { name: 'Asia', href: '/job-seekers/asia' },
@@ -52,7 +52,7 @@ const menuItems = [
     },
     { 
         name: 'Language Test', 
-        href: '#language',
+        href: '/language-test/tef-tcf',
         submenu: [
             { name: 'TEF/TCF', href: '/language-test/tef-tcf' },
             { name: 'IELTS', href: '/language-test/ielts' },
