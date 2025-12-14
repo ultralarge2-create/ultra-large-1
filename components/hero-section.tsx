@@ -1,11 +1,12 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import { Mail, SendHorizonal } from 'lucide-react'
+import { Mail, SendHorizonal, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { TextEffect } from '@/components/ui/text-effect'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { LogoCloud } from './logo-cloud'
+import Link from 'next/link'
 
 const transitionVariants = {
     item: {
@@ -27,9 +28,25 @@ const transitionVariants = {
     },
 }
 
+const heroImages = [
+    '/heroimage2.png',
+    '/heroimage3.png',
+    '/heroimage4.png',
+    '/Express.png',
+    '/workpermit2.jpg'
+]
+
 export default function HeroSection() {
     const [email, setEmail] = React.useState('')
     const [loading, setLoading] = React.useState(false)
+    const [currentImage, setCurrentImage] = React.useState(0)
+
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % heroImages.length)
+        }, 4000)
+        return () => clearInterval(interval)
+    }, [])
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -63,7 +80,7 @@ export default function HeroSection() {
                                 speedSegment={0.3}
                                 as="h1"
                                 className="text-balance text-5xl font-normal md:text-6xl">
-                                Ultra Large: Your Future, Scaled Up
+                                Trusted Travel & Immigration Experts in Rwanda
                             </TextEffect>
                             <TextEffect
                                 per="line"
@@ -72,7 +89,7 @@ export default function HeroSection() {
                                 delay={0.5}
                                 as="p"
                                 className="mx-auto mt-6 max-w-2xl text-pretty text-base">
-                                Stop dreaming about a bigger life and start living it. Ultra Large is your dedicated partner for securing successful study, work, and permanent residency visas across the globe. We simplify complex immigration processes so you can focus on monumental results.
+                                ULTRALARGE LTD - Your gateway to Canada, USA, and Europe. Expert immigration services including Express Entry, work permits, student visas, Schengen visas, plus flight booking and car rentals.
                             </TextEffect>
 
                             <AnimatedGroup
@@ -117,14 +134,27 @@ export default function HeroSection() {
                                     </div>
                                 </form>
 
-                                <div className="relative mx-auto mt-32 max-w-2xl">
-                                    <Image
-                                        src="/heroimage4.png"
-                                        alt="Hero Image"
-                                        width={320}
-                                        height={400}
-                                        className="mx-auto"
-                                    />
+                                <div className="relative mx-auto mt-32 max-w-5xl">
+                                    <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                                        <Image
+                                            src={heroImages[currentImage]}
+                                            alt="Travel & Immigration"
+                                            fill
+                                            className="object-cover object-center"
+                                            priority
+                                        />
+                                        <button onClick={() => setCurrentImage((prev) => (prev - 1 + heroImages.length) % heroImages.length)} className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full">
+                                            <ChevronLeft className="size-6" />
+                                        </button>
+                                        <button onClick={() => setCurrentImage((prev) => (prev + 1) % heroImages.length)} className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full">
+                                            <ChevronRight className="size-6" />
+                                        </button>
+                                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                                            {heroImages.map((_, idx) => (
+                                                <button key={idx} onClick={() => setCurrentImage(idx)} className={`w-2 h-2 rounded-full ${idx === currentImage ? 'bg-white' : 'bg-white/50'}`} />
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </AnimatedGroup>
                         </div>

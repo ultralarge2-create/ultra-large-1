@@ -14,63 +14,56 @@ const menuItems = [
         submenu: []
     },
     { 
-        name: 'Immigration', 
-        href: '/immigration/work-permit',
+        name: 'About', 
+        href: '/about',
+        submenu: []
+    },
+    { 
+        name: 'Services', 
+        href: '/services',
         submenu: [
-            { name: 'work permit', href: '/immigration/work-permit' },
-            { name: 'permanent resident', href: '/immigration/permanent-resident' },
-            { name: 'express entry', href: '/immigration/express-entry' },
-            { name: 'tourist visa', href: '/immigration/tourist-visa' },
-            { name: 'family reunification visa', href: '/immigration/family-reunification' },
-            { name: 'sponsorship visa', href: '/immigration/sponsorship-visa' },
-            { name: 'visit visa', href: '/immigration/visit-visa' }
+            { name: 'All Services', href: '/services' },
+            { name: 'Canada Immigration', href: '/services/canada' },
+            { name: 'USA Visa Services', href: '/services/usa' },
+            { name: 'Europe Immigration', href: '/services/europe' },
+            { name: 'Travel Services', href: '/services/travel' }
         ]
     },
     { 
         name: 'Study Abroad', 
-        href: '/study-abroad/europe',
+        href: '/study-abroad/canada',
         submenu: [
-            { name: 'Europe', href: '/study-abroad/europe' },
-            { name: 'Asia', href: '/study-abroad/asia' },
-            { name: 'UK', href: '/study-abroad/uk' },
+            { name: 'Canada', href: '/study-abroad/canada' },
             { name: 'USA', href: '/study-abroad/usa' },
-            { name: 'Australia', href: '/study-abroad/australia' },
-            { name: 'Canada', href: '/study-abroad/canada' }
+            { name: 'Europe', href: '/study-abroad/europe' },
+            { name: 'UK', href: '/study-abroad/uk' },
+            { name: 'Australia', href: '/study-abroad/australia' }
         ]
     },
     { 
-        name: 'Job Seekers', 
+        name: 'Work Abroad', 
         href: '/job-seekers/europe',
         submenu: [
-            { name: 'Europe', href: '/job-seekers/europe' },
-            { name: 'Asia', href: '/job-seekers/asia' },
-            { name: 'Australia', href: '/job-seekers/australia' },
-            { name: 'UK', href: '/job-seekers/uk' },
-            { name: 'USA', href: '/job-seekers/usa' },
-            { name: 'Canada', href: '/job-seekers/canada' }
+            { name: 'Europe Jobs', href: '/job-seekers/europe' },
+            { name: 'Canada Jobs', href: '/job-seekers/canada' },
+            { name: 'USA Jobs', href: '/job-seekers/usa' },
+            { name: 'UK Jobs', href: '/job-seekers/uk' }
         ]
     },
     { 
-        name: 'Language Test', 
-        href: '/language-test/tef-tcf',
+        name: 'Resources', 
+        href: '/tools',
         submenu: [
-            { name: 'TEF/TCF', href: '/language-test/tef-tcf' },
-            { name: 'IELTS', href: '/language-test/ielts' },
-            { name: 'Duolingo', href: '/language-test/duolingo' },
-            { name: 'TOEFL', href: '/language-test/toefl' }
+            { name: 'Tools & Resources', href: '/tools' },
+            { name: 'FAQ', href: '/faq' },
+            { name: 'Success Stories', href: '/success-stories' }
         ]
     },
     { 
-        name: 'Flight Booking', 
-        href: '/flight-booking',
+        name: 'Contact', 
+        href: '/contact',
         submenu: []
-    },
-    { 
-        name: 'Car Rental', 
-        href: '/car-rental',
-        submenu: []
-    },
-
+    }
 ]
 
 export const HeroHeader = () => {
@@ -125,7 +118,7 @@ export const HeroHeader = () => {
                                                         <Link
                                                             key={subindex}
                                                             href={subitem.href}
-                                                            className="text-muted-foreground hover:text-accent-foreground block px-3 py-2 text-xs rounded hover:bg-muted duration-150">
+                                                            className="text-muted-foreground hover:text-white active:bg-gray-200 block px-3 py-2 text-xs rounded hover:bg-blue-600 duration-150">
                                                             {subitem.name}
                                                         </Link>
                                                     ))}
@@ -144,7 +137,7 @@ export const HeroHeader = () => {
                                         <li key={index}>
                                             <Link
                                                 href={item.href}
-                                                className="text-muted-foreground hover:text-accent-foreground block duration-150">
+                                                className="text-muted-foreground hover:text-white hover:bg-blue-600 active:bg-gray-200 block duration-150 px-3 py-2 rounded">
                                                 <span>{item.name}</span>
                                             </Link>
                                             {item.submenu && item.submenu.length > 0 && (
@@ -153,7 +146,7 @@ export const HeroHeader = () => {
                                                         <Link
                                                             key={subindex}
                                                             href={subitem.href}
-                                                            className="text-muted-foreground hover:text-accent-foreground block text-xs duration-150">
+                                                            className="text-muted-foreground hover:text-white hover:bg-blue-600 active:bg-gray-200 block text-xs duration-150 px-3 py-2 rounded">
                                                             {subitem.name}
                                                         </Link>
                                                     ))}

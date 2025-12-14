@@ -17,11 +17,11 @@ export default function StatsSection() {
                         <p>Global Destinations</p>
                     </div>
                     <div className="space-y-4">
-                        <div className="text-5xl font-bold">300+</div>
+                        <div className="text-5xl font-bold">3k+</div>
                         <p>Visas Approved</p>
                     </div>
                     <div className="space-y-4">
-                        <div className="text-5xl font-bold">400+</div>
+                        <div className="text-5xl font-bold">40+</div>
                         <p>Lives Launched</p>
                     </div>
                 </div>

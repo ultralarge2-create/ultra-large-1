@@ -3,52 +3,44 @@ import Link from 'next/link'
 
 const links = [
     {
-        group: 'Services',
+        group: 'Canada Immigration',
         items: [
-            {
-                title: 'Work Permit',
-                href: '/immigration/work-permit',
-            },
-            {
-                title: 'Permanent Resident',
-                href: '/immigration/permanent-resident',
-            },
             {
                 title: 'Express Entry',
                 href: '/immigration/express-entry',
             },
             {
-                title: 'Tourist Visa',
+                title: 'Work Permits',
+                href: '/immigration/work-permit',
+            },
+            {
+                title: 'Study in Canada',
+                href: '/study-abroad/canada',
+            },
+            {
+                title: 'Visitor Visa',
                 href: '/immigration/tourist-visa',
-            },
-            {
-                title: 'Visit Visa',
-                href: '/immigration/visit-visa',
-            },
-            {
-                title: 'Car Rental',
-                href: '/car-rental',
             },
         ],
     },
     {
-        group: 'Immigration',
+        group: 'USA & Europe',
         items: [
             {
-                title: 'Family Reunification',
-                href: '/immigration/family-reunification',
+                title: 'USA Visas',
+                href: '/study-abroad/usa',
             },
             {
-                title: 'Sponsorship Visa',
+                title: 'Europe Work',
+                href: '/job-seekers/europe',
+            },
+            {
+                title: 'Schengen Visa',
                 href: '/immigration/sponsorship-visa',
             },
             {
-                title: 'Work Permit',
-                href: '/immigration/work-permit',
-            },
-            {
-                title: 'Express Entry',
-                href: '/immigration/express-entry',
+                title: 'Study in Europe',
+                href: '/study-abroad/europe',
             },
         ],
     },
@@ -56,12 +48,16 @@ const links = [
         group: 'Company',
         items: [
             {
-                title: 'Home',
-                href: '/',
-            },
-            {
                 title: 'About Us',
                 href: '/about',
+            },
+            {
+                title: 'Tools & Resources',
+                href: '/tools',
+            },
+            {
+                title: 'FAQ',
+                href: '/faq',
             },
             {
                 title: 'Success Stories',
@@ -70,14 +66,6 @@ const links = [
             {
                 title: 'Contact',
                 href: '/contact',
-            },
-            {
-                title: 'Agent Portal',
-                href: '/agent-portal',
-            },
-            {
-                title: 'Car Rental',
-                href: '/car-rental',
             },
         ],
     },

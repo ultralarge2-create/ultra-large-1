@@ -13,37 +13,29 @@ export const LogoCloud = () => {
                             speedOnHover={20}
                             speed={40}
                             gap={48}>
-                            <div className="flex items-center">
-                                <span className="text-2xl font-bold">🇨🇦</span>
-                                <span className="ml-2 text-sm font-medium">Canada</span>
+                            <div className="rounded-full border bg-gray-100 px-6 py-2 shadow-sm whitespace-nowrap">
+                                <span className="text-sm font-medium">Canada</span>
                             </div>
-                            <div className="flex items-center">
-                                <span className="text-2xl font-bold">🇬🇧</span>
-                                <span className="ml-2 text-sm font-medium">UK</span>
+                            <div className="rounded-full border bg-gray-100 px-6 py-2 shadow-sm whitespace-nowrap">
+                                <span className="text-sm font-medium">UK</span>
                             </div>
-                            <div className="flex items-center">
-                                <span className="text-2xl font-bold">🇺🇸</span>
-                                <span className="ml-2 text-sm font-medium">USA</span>
+                            <div className="rounded-full border bg-gray-100 px-6 py-2 shadow-sm whitespace-nowrap">
+                                <span className="text-sm font-medium">USA</span>
                             </div>
-                            <div className="flex items-center">
-                                <span className="text-2xl font-bold">🇦🇺</span>
-                                <span className="ml-2 text-sm font-medium">Australia</span>
+                            <div className="rounded-full border bg-gray-100 px-6 py-2 shadow-sm whitespace-nowrap">
+                                <span className="text-sm font-medium">Australia</span>
                             </div>
-                            <div className="flex items-center">
-                                <span className="text-2xl font-bold">🇦🇪</span>
-                                <span className="ml-2 text-sm font-medium">UAE</span>
+                            <div className="rounded-full border bg-gray-100 px-6 py-2 shadow-sm whitespace-nowrap">
+                                <span className="text-sm font-medium">UAE</span>
                             </div>
-                            <div className="flex items-center">
-                                <span className="text-2xl font-bold">🇩🇪</span>
-                                <span className="ml-2 text-sm font-medium">Germany</span>
+                            <div className="rounded-full border bg-gray-100 px-6 py-2 shadow-sm whitespace-nowrap">
+                                <span className="text-sm font-medium">Germany</span>
                             </div>
-                            <div className="flex items-center">
-                                <span className="text-2xl font-bold">🇫🇷</span>
-                                <span className="ml-2 text-sm font-medium">France</span>
+                            <div className="rounded-full border bg-gray-100 px-6 py-2 shadow-sm whitespace-nowrap">
+                                <span className="text-sm font-medium">France</span>
                             </div>
-                            <div className="flex items-center">
-                                <span className="text-2xl font-bold">🇳🇿</span>
-                                <span className="ml-2 text-sm font-medium">New Zealand</span>
+                            <div className="rounded-full border bg-gray-100 px-6 py-2 shadow-sm whitespace-nowrap">
+                                <span className="text-sm font-medium">New Zealand</span>
                             </div>
                         </InfiniteSlider>
 
